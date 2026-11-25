@@ -1,0 +1,62 @@
+Gerador de assinaturas de e-mail da Robotictech
+Notas técnicas da versão 6 | 25 de novembro de 2026
+
+Arquivos
+
+01-Leia-primeiro.pdf      Guia ilustrado de uso.
+aplicativo/index.html     Gerador de assinaturas para Outlook.
+suporte/Gmail.html        Gerador com cópia compacta para Gmail.
+Texto-para-envio.txt      Descrição curta do anexo.
+SHA256SUMS.txt            Hashes dos arquivos desta edição.
+
+Funcionamento
+
+Os dois geradores são arquivos HTML com JavaScript e abrem no navegador
+após a extração do ZIP. O formulário inicia em branco. Nome e cargo são
+obrigatórios. Telefone e foto são opcionais. A imagem pode ser JPG,
+PNG ou WebP. O recorte e o ajuste do retrato acontecem no navegador.
+
+“Copiar assinatura” coloca o cartão formatado na área de transferência.
+Se o navegador exigir cópia manual, o gerador seleciona o cartão e
+indica o atalho. “Baixar cópia editável” salva um novo HTML que contém
+os dados preenchidos e a foto escolhida.
+
+Contato e imagens
+
+Com telefone preenchido, o cartão tem quatro links. O telefone usa o
+número informado. Os outros três links são os canais da Robotictech.
+
+  https://www.robotictech.com.br/
+  https://www.instagram.com/robotic.tech/
+  https://www.youtube.com/@RobotictechOficial
+
+Os desenhos laranja são ilustrativos. O HTML copiado carrega a marca e
+os ícones das redes sociais de static.wixstatic.com. A foto e os desenhos
+laranja são incorporados à cópia. A exibição das imagens também depende
+das configurações do aplicativo de e-mail.
+
+Compatibilidade
+
+O arquivo para Gmail compacta a foto e mede o tamanho do cartão antes
+da cópia. O Gmail informa um limite de 10.000 caracteres para a
+assinatura, incluindo imagens. Após salvar, uma nova mensagem permite
+conferir o cartão. A aparência da mensagem recebida depende do cliente
+de e-mail e das regras de carregamento de imagens.
+
+Referências dos editores de assinatura
+Outlook: https://support.microsoft.com/pt-br/outlook/mail/how-to-add-and-change-an-email-signature-in-outlook
+Gmail: https://support.google.com/mail/answer/8395?hl=pt-BR
+
+Testes e integridade
+
+Em 25/11/2026, os testes no Chrome com dados fictícios cobriram o
+formulário, a foto, a cópia formatada, os destinos dos links e a
+reabertura da cópia editável. No gerador compacto, o cartão testado
+com foto e quatro links ocupou 8.685 bytes na área de transferência.
+
+Revisão de origem de aplicativo/index.html
+de79d825d17721269f1b223dfdec17be39b0fcf2
+
+Comandos de conferência a partir da pasta extraída
+  macOS: shasum -a 256 -c SHA256SUMS.txt
+  Linux: sha256sum -c SHA256SUMS.txt

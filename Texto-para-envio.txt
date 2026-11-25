@@ -1,0 +1,3 @@
+Assunto: Gerador de assinaturas de e-mail da Robotictech
+
+Segue o gerador de assinaturas da Robotictech, com opções para Outlook e Gmail. O PDF que acompanha o pacote mostra como preencher os dados e copiar a assinatura.
