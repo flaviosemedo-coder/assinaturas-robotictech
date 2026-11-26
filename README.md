@@ -10,4 +10,4 @@ Gerador de assinaturas para Outlook e Gmail. O modelo começa em branco. Nome e 
 2. Preencha os dados e selecione **Copiar assinatura**.
 3. Cole a assinatura nas configurações da conta de e-mail, salve e abra uma nova mensagem para conferir.
 
-O pacote inclui as [notas técnicas da versão 6](./02-Guia-tecnico.txt) e o [manifesto de integridade](./SHA256SUMS.txt).
+O pacote inclui as [notas técnicas da versão 6.1](./02-Guia-tecnico.txt) e o [manifesto de integridade](./SHA256SUMS.txt).

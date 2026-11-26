@@ -55,7 +55,7 @@ reabertura da cópia editável. No gerador compacto, o cartão testado
 com foto e quatro links ocupou 8.685 bytes na área de transferência.
 
 Revisão de origem de aplicativo/index.html
-de79d825d17721269f1b223dfdec17be39b0fcf2
+4c193d8f0348a27f984f2182cdd2cd70bd80a8e1
 
 Comandos de conferência a partir da pasta extraída
   macOS: shasum -a 256 -c SHA256SUMS.txt
