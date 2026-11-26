@@ -4,29 +4,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#0d2338">
+  <meta name="robotictech-version" content="6.1">
   <title>Assinatura de e-mail | Robotictech</title>
   <style>
     :root{color-scheme:light;--ink:#10283f;--secondary:#4e6472;--line:#cedeE3;--blue:#124f73;--round:14px}
     *{box-sizing:border-box}
     body{margin:0;background:#f6f8f9;color:var(--ink);font:16px/1.5 Inter,'Avenir Next','Segoe UI',Arial,sans-serif}
     .mast{background:#0d2338;border-bottom:3px solid #2387a7}
-    .mast-in,main{width:min(100% - 56px,1100px);margin:auto}
-    .mast-in{height:66px;display:flex;align-items:center}
-    .brand{display:block;width:158px;height:auto}
-    main{padding:clamp(28px,5vw,64px) 0 50px}
+    .mast-in,main{width:min(100% - 36px,1040px);margin:auto}
+    .mast-in{height:46px;display:flex;align-items:center}
+    .brand{display:block;width:135px;height:auto}
+    main{padding:18px 0 26px}
     h1,h2,p{margin:0}
-    h1{font-size:clamp(30px,3.5vw,44px);line-height:1.12;letter-spacing:-.048em;font-weight:650}
-    h2{font-size:19px;letter-spacing:-.025em;font-weight:650;line-height:1.25}
-    .lead{margin:10px 0 28px;color:var(--secondary);font-size:16px}
-    .layout{display:grid;grid-template-columns:minmax(244px,.74fr) minmax(455px,1.26fr);align-items:start;gap:20px}
-    .panel{background:white;border:1px solid #d1dfe5;border-radius:var(--round);padding:24px;min-width:0}
-    .fields{display:grid;gap:16px;margin-top:22px}
+    h1{font-size:clamp(24px,2.6vw,32px);line-height:1.12;letter-spacing:-.048em;font-weight:650}
+    h2{font-size:17px;letter-spacing:-.025em;font-weight:650;line-height:1.25}
+    .lead{margin:5px 0 15px;color:var(--secondary);font-size:16px}
+    .layout{display:grid;grid-template-columns:minmax(244px,.74fr) minmax(455px,1.26fr);align-items:start;gap:14px}
+    .panel{background:white;border:1px solid #d1dfe5;border-radius:var(--round);padding:15px;min-width:0}
+    .fields{display:grid;gap:10px;margin-top:12px}
     .field{display:block;font-size:14px;font-weight:650}
     .optional{font-weight:400;color:#59707b}
-    .field input{appearance:none;width:100%;display:block;margin-top:5px;border:1px solid #aabdc8;border-radius:7px;padding:9px 11px;background:white;font:400 16px/1.4 Inter,'Avenir Next','Segoe UI',Arial,sans-serif;color:var(--ink)}
+    .field input{appearance:none;width:100%;display:block;margin-top:5px;border:1px solid #aabdc8;border-radius:7px;min-height:40px;padding:7px 9px;background:white;font:400 16px/1.4 Inter,'Avenir Next','Segoe UI',Arial,sans-serif;color:var(--ink)}
     .field input::placeholder{color:#677e89;opacity:1}
-    .photo{border-top:1px solid #dbe5e9;margin-top:22px;padding-top:16px}
-    .photo-title{display:block;font-size:14px;font-weight:650;margin-bottom:8px}
+    .photo{border-top:1px solid #dbe5e9;margin-top:14px;padding-top:10px}
+    .photo-title{display:block;font-size:14px;font-weight:650;margin-bottom:6px}
     .photo-actions,.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     button,.photo-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:white;border:1px solid #b0c4ce;border-radius:7px;padding:9px 13px;font:600 14px/1.4 Inter,'Avenir Next','Segoe UI',Arial,sans-serif;color:#194961;cursor:pointer}
     button[hidden],.photo-action[hidden]{display:none}
@@ -34,20 +35,20 @@
     #photo{position:absolute;width:1px;height:1px;padding:0;clip-path:inset(50%);overflow:hidden}
     #remove-photo{border:0;text-decoration:underline;text-underline-offset:3px;padding-left:4px;padding-right:4px}
     .preview{overflow:hidden;padding:0}
-    .preview h2{padding:22px 24px 17px}
-    .surface{display:grid;place-items:center;min-height:217px;padding:28px 20px;background-color:#edf3f5;background-image:radial-gradient(#a8c0c960 .8px,transparent .9px);background-size:12px 12px;border-block:1px solid #dbe5e9}
+    .preview h2{padding:13px 15px 11px}
+    .surface{display:grid;place-items:center;min-height:171px;padding:15px 12px;background-color:#edf3f5;background-image:radial-gradient(#a8c0c960 .8px,transparent .9px);background-size:12px 12px;border-block:1px solid #dbe5e9}
     #signature{width:100%;max-width:492px;font:14px/1.5 Arial,Helvetica,sans-serif}
     #signature [data-field="name"],#signature [data-field="role"]{overflow-wrap:anywhere}
-    .actions{padding:19px 23px 0}
+    .actions{padding:12px 14px 0}
     #copy{background:#124b6c;border-color:#124b6c;color:white}
     #copy:hover{background:#0d3d59}
     #save:hover,.photo-action:hover{background:#f2f7f9}
     :is(a,input,button):focus-visible,#photo:focus-visible+.photo-action{outline:2px solid #15779e;outline-offset:3px}
-    .instruction,#status{margin:12px 23px 18px;color:#4e6674;font-size:14px}
+    .instruction,#status{margin:8px 14px 12px;color:#4e6674;font-size:14px}
     #status:empty{display:none}
     #status:not(:empty)+.instruction{display:none}
-    @media(max-width:830px){.layout{grid-template-columns:1fr}.mast-in,main{max-width:640px}.fields{grid-template-columns:repeat(2,minmax(0,1fr))}.field:first-child{grid-column:1/-1}.surface{min-height:195px}.lead{margin-bottom:20px}}
-    @media(max-width:500px){.mast-in,main{width:calc(100% - 24px)}.mast-in{height:53px}.brand{width:140px}main{padding-top:28px}.layout{gap:15px}.panel{padding:17px}.preview{padding:0}.preview h2{padding:17px}.surface{padding:16px 4px;min-height:160px}.actions{padding:16px 13px 0;gap:8px}.instruction,#status{margin-left:13px;margin-right:13px}.fields{grid-template-columns:1fr;gap:12px}.photo{margin-top:16px}.lead{font-size:15px}}
+    @media(max-width:830px){.layout{grid-template-columns:1fr}.mast-in,main{max-width:640px}.fields{grid-template-columns:repeat(2,minmax(0,1fr))}.field:first-child{grid-column:1/-1}.surface{min-height:157px}.lead{margin-bottom:12px}}
+    @media(max-width:500px){.mast-in,main{width:calc(100% - 24px)}.mast-in{height:44px}.brand{width:128px}main{padding-top:14px}.layout{gap:12px}.panel{padding:13px}.preview{padding:0}.preview h2{padding:13px}.surface{padding:12px 4px;min-height:148px}.actions{padding:10px 12px 0;gap:7px}.instruction,#status{margin-left:13px;margin-right:13px}.fields{grid-template-columns:1fr;gap:9px}.field input{min-height:44px}.photo{margin-top:12px}.lead{font-size:15px}}
     @media print{.mast,.heading,#editor,.preview>h2,.actions,#status,.instruction{display:none}main,.layout,.panel,.surface{display:block;margin:0;padding:0;border:0;background:white;width:100%}}
   
 @media (max-width:420px) {
